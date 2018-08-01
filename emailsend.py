@@ -33,7 +33,7 @@ print("please enter email and password")
 
 email,serviceprovider=get_mail()
 print("your service provider",serviceprovider)
-password=input("password:")
+password=getpass.getpass("password:")
 while True:
 	smtpdomain=set_smtp_domain(serviceprovider)
 	connection=smtplib.SMTP(smtpdomain,587)
